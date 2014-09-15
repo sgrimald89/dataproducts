@@ -1,0 +1,82 @@
+---
+title       : BMI Calculator
+subtitle    : Pitch
+author      : Saul Grimaldo
+job         : Consultant
+framework   : html5slides       # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## What is a BMI?
+BMI, or Body Mass Index, is:
+
+1.A proxy for body fat percentage
+
+2.Most useful for people with a sedentary lifestyle. 
+
+3.Not reliable for taller people
+
+---
+
+## Body Mass Index Calculator
+
+I created an app that helps people calculate their own BMI, using the BMI formula:
+
+$$\frac{weight}{height^2}$$
+
+Where weight is in kilograms and height is in meters.
+
+You can find the app in: 
+
+https://sgrimald89.shinyapps.io/DataProducts/
+
+---
+
+### Example- How to use the application
+
+You weigh 150 lbs and are 5 feet 8 inches
+
+1.Choose to enter your data in the Imperial system using the pulldown box.
+
+2.Enter your height and weight (150 lbs and 5.667 feet) into their respective boxes.
+
+3.Hit "Calculate BMI" and you're DONE!
+
+---
+### How it works
+
+First, R will convert your height and weight into the metric system (if they're not already metric), and then R will calculate the BMI using your metric system measurements using the following:
+
+```{r, echo=FALSE}
+height = 5.667/3.28084
+weight = 150/2.20462
+```
+```{r, echo=TRUE}
+BMI = weight / (height*height)
+```
+
+Thus R will evaluate this example to:
+
+```{r,echo=FALSE}
+weight / (height*height)
+```
+
+---
+
+### What your BMI means:
+
+1. If your BMI is less than 18.5, then you're likely underweight.
+
+2. If your BMI is within the 18.5-24.9 range, you are likely in a normal weight.
+
+3. If your BMI is within the 25-29.9 range, you are likely overweight. 
+
+4. If your BMI is higher than or equal to 30, you are likely obese.
+
+NOTE: These classifications are true only if you have an average lifestyle.
+
+THANK YOU!
