@@ -51,18 +51,17 @@ You weigh 150 lbs and are 5 feet 8 inches
 
 First, R will convert your height and weight into the metric system (if they're not already metric), and then R will calculate the BMI using your metric system measurements using the following:
 
-```{r, echo=FALSE}
-height = 5.667/3.28084
-weight = 150/2.20462
-```
-```{r, echo=TRUE}
+
+
+```r
 BMI = weight / (height*height)
 ```
 
 Thus R will evaluate this example to:
 
-```{r,echo=FALSE}
-weight / (height*height)
+
+```
+## [1] 22.8
 ```
 
 ---

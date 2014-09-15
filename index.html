@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>BMI Calculator</title>
+	<meta name="description" content="BMI Calculator">
+	<meta name="author" content="Saul Grimaldo">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />    
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>What is a BMI?</h3>
+  <p>BMI, or Body Mass Index, is:</p>
+
+<p>1.A proxy for body fat percentage</p>
+
+<p>2.Most useful for people with a sedentary lifestyle. </p>
+
+<p>3.Not reliable for taller people</p>
+
+</article>
+
+<article class="" id="slide-2" style="background:;">
+  <h3>Body Mass Index Calculator</h3>
+  <p>I created an app that helps people calculate their own BMI, using the BMI formula:</p>
+
+<p>\[\frac{weight}{height^2}\]</p>
+
+<p>Where weight is in kilograms and height is in meters.</p>
+
+<p>You can find the app in: </p>
+
+<p><a href="https://sgrimald89.shinyapps.io/DataProducts/">https://sgrimald89.shinyapps.io/DataProducts/</a></p>
+
+</article>
+
+<article class="" id="slide-3" style="background:;">
+  <h3>Example- How to use the application</h3>
+  <p>You weigh 150 lbs and are 5 feet 8 inches</p>
+
+<p>1.Choose to enter your data in the Imperial system using the pulldown box.</p>
+
+<p>2.Enter your height and weight (150 lbs and 5.667 feet) into their respective boxes.</p>
+
+<p>3.Hit &quot;Calculate BMI&quot; and you&#39;re DONE!</p>
+
+</article>
+
+<article class="" id="slide-4" style="background:;">
+  <h3>How it works</h3>
+  <p>First, R will convert your height and weight into the metric system (if they&#39;re not already metric), and then R will calculate the BMI using your metric system measurements using the following:</p>
+
+<pre><code class="r">BMI = weight / (height*height)
+</code></pre>
+
+<p>Thus R will evaluate this example to:</p>
+
+<pre><code>## [1] 22.8
+</code></pre>
+
+</article>
+
+<article class="" id="slide-5" style="background:;">
+  <h3>What your BMI means:</h3>
+  <ol>
+<li><p>If your BMI is less than 18.5, then you&#39;re likely underweight.</p></li>
+<li><p>If your BMI is within the 18.5-24.9 range, you are likely in a normal weight.</p></li>
+<li><p>If your BMI is within the 25-29.9 range, you are likely overweight. </p></li>
+<li><p>If your BMI is higher than or equal to 30, you are likely obese.</p></li>
+</ol>
+
+<p>NOTE: These classifications are true only if you have an average lifestyle.</p>
+
+<p>THANK YOU!</p>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	    tex2jax: {
+	      inlineMath: [['$','$'], ['\\(','\\)']],
+	      processEscapes: true
+	    }
+	  });
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script> -->
+	<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
